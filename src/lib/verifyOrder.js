@@ -6,6 +6,7 @@ exports.verifyOrder = async function (orderId, vendorToken) {
     ).then((response) => {
         return response.data;
     }).catch((err) => {
-        throw new Error(JSON.stringify(err));
+        if (error.response.data) return error.response.data;
+        throw new Error("Unknown Axios error!" + JSON.stringify(err));
     });
 };
