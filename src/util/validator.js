@@ -2,7 +2,7 @@ const Validator = require('fastest-validator');
 const v = new Validator();
 
 const orderCreationArgs = {
-    price: { type: 'number', positive: true, integer: true, min: 3, max: 1000 },
+    price: { type: 'number', positive: true, min: 3, max: 1000 },
     isInTestMode: { type: 'number', integer: true, min: 0, max: 1 },
     successfulURL: { type: 'string', min: 16, max: 1200 },
     failURL: { type: 'string', min: 16, max: 1200 },

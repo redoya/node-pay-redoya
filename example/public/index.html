@@ -1,0 +1,52 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>RedoyaPay Example</title>
+  </head>
+  <body>
+    <div>
+      <h2>Rastgele bir kullanıcı ID belirtin:</h2>
+      <input id="user_id_input" type="text" />
+      <h2>Reaktif uygulamalar için buton örneği: (Vue, React, Svelte vb.)</h2>
+      Ürünler:
+      <br />
+      <button onclick="setOrderURL('asd123')">Elma</button>
+      <button onclick="setOrderURL('dfg567')">Armut</button>
+      <button onclick="setOrderURL('hjk345')">Altın armut</button>
+
+      <script>
+        function setOrderURL(productId) {
+          axios
+            .post("/orderURL", {
+              productId,
+              userId: document.getElementById("user_id_input").value,
+            })
+            .then(function (response) {
+              location.href = response.data;
+            })
+            .catch(function (error) {
+              console.log(error);
+              if (error.response.data)
+                return (document.getElementById("errors").innerHTML =
+                  error.response.data);
+              document.getElementById("errors").innerHTML =
+                "BİLİNMEYEN HATA!<br />" + JSON.stringify(error);
+            });
+        }
+      </script>
+    </div>
+    <div>
+      <h2>Yönlendirme linki ile:</h2>
+      <br />
+      <a href="/newOrder?productId=asd123&userId=ornek">Elma</a>
+      <br />
+      <a href="/newOrder?productId=dfg567&userId=ornek">Armut</a>
+      <br />
+      <a href="/newOrder?productId=hjk345&userId=ornek">Altın armut</a>
+    </div>
+    <p id="errors"></p>
+  </body>
+</html>

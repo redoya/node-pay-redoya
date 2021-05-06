@@ -1,6 +1,6 @@
 {
   "name": "pay-redoya",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A module that made for using Redoya.NET Pay API very easier.",
   "main": "src/index.js",
   "scripts": {
@@ -23,6 +23,6 @@
     "jsonwebtoken": "^8.5.1"
   },
   "devDependencies": {
-    "jest": "^26.6.3"
+    "jest": "^26.5.0"
   }
 }
