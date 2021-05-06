@@ -1,0 +1,28 @@
+{
+  "name": "pay-redoya",
+  "version": "1.0.0",
+  "description": "A module that made for using Redoya.NET Pay API very easier.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redoya/node.pay.redoya.git"
+  },
+  "keywords": [],
+  "author": "Halil Tezcan KARABULUT <unitythemaker@gmail.com",
+  "license": "GNU GPLv3",
+  "bugs": {
+    "url": "https://github.com/redoya/node.pay.redoya/issues"
+  },
+  "homepage": "https://github.com/redoya/node.pay.redoya#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "fastest-validator": "^1.10.1",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
