@@ -1,6 +1,6 @@
 {
   "name": "pay-redoya",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A module that made for using Redoya.NET Pay API very easier.",
   "main": "src/index.js",
   "scripts": {
